@@ -1,4 +1,5 @@
 import React from 'react';
+import "./App.scss";
 
 interface IAppProps {
     name?: string
@@ -17,7 +18,9 @@ class App extends React.Component<IAppProps, { count: number }> {
 
     render() {
         return (
-            <div>
+            <div className="appContainer">
+                <h1>Isomorphic React Application</h1>
+                <h2>React, NodeJS, ExpressJS, Typescript, MobX</h2>
                 <h1>hey {this.props.name}!</h1>
                 <button onClick={this.handleClick}>Clicks: {this.state.count}</button>
             </div>
