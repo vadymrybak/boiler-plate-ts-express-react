@@ -1,5 +1,6 @@
-import React from 'react';
-import "./App.scss";
+import React from "react";
+import withStyles from "isomorphic-style-loader/withStyles";
+import styles from "./App.scss";
 
 interface IAppProps {
     name?: string
@@ -28,4 +29,4 @@ class App extends React.Component<IAppProps, { count: number }> {
     }
 }
 
-export default App
+export default withStyles(styles)(App);
